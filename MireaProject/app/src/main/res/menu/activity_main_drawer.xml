@@ -25,5 +25,9 @@
             android:id="@+id/webViewFragment"
             android:icon="@android:drawable/ic_menu_mapmode"
             android:title="WEB" />
+        <item
+            android:id="@+id/wokerFragment"
+            android:icon="@android:drawable/ic_menu_mapmode"
+            android:title="Worker" />
     </group>
 </menu>
