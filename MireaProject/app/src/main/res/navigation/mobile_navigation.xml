@@ -28,6 +28,18 @@
         android:label="fragment_worker"
         tools:layout="@layout/fragment_worker" />
     <fragment
+        android:id="@+id/sensorlogic"
+        android:name="ru.mirea.logunovao.mireaproject.SensorLogicFragment"
+        android:label="fragment_sensorlogic" />
+    <fragment
+        android:id="@+id/camera"
+        android:name="ru.mirea.logunovao.mireaproject.CameraFragment"
+        android:label="fragment_camera" />
+    <fragment
+        android:id="@+id/audio"
+        android:name="ru.mirea.logunovao.mireaproject.AudioFragment"
+        android:label="fragment_audio" />
+    <fragment
         android:id="@+id/dataFragment"
         android:name="ru.mirea.logunovao.mireaproject.DataFragment"
         android:label="fragment_data"

@@ -29,5 +29,17 @@
             android:id="@+id/wokerFragment"
             android:icon="@android:drawable/ic_menu_mapmode"
             android:title="Worker" />
+        <item
+            android:id="@+id/sensorlogic"
+            android:icon="@android:drawable/ic_menu_mapmode"
+            android:title="SensorLogic" />
+        <item
+            android:id="@+id/camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Camera" />
+        <item
+            android:id="@+id/audio"
+            android:icon="@android:drawable/ic_btn_speak_now"
+            android:title="Rec" />
     </group>
 </menu>
