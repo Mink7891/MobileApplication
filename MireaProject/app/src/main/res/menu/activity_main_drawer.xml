@@ -49,5 +49,9 @@
             android:id="@+id/file"
             android:icon="@android:drawable/sym_contact_card"
             android:title="File" />
+        <item
+            android:id="@+id/network"
+            android:icon="@android:drawable/ic_menu_mapmode"
+            android:title="Network" />
     </group>
 </menu>

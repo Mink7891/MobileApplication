@@ -48,6 +48,10 @@
         android:name="ru.mirea.logunovao.mireaproject.FileFragment"
         android:label="fragment_file" />
     <fragment
+        android:id="@+id/network"
+        android:name="ru.mirea.logunovao.mireaproject.NetworkInfoFragment"
+        android:label="fragment_network_info" />
+    <fragment
         android:id="@+id/dataFragment"
         android:name="ru.mirea.logunovao.mireaproject.DataFragment"
         android:label="fragment_data"
