@@ -41,5 +41,13 @@
             android:id="@+id/audio"
             android:icon="@android:drawable/ic_btn_speak_now"
             android:title="Rec" />
+        <item
+            android:id="@+id/profile"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Profile" />
+        <item
+            android:id="@+id/file"
+            android:icon="@android:drawable/sym_contact_card"
+            android:title="File" />
     </group>
 </menu>
