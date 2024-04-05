@@ -52,6 +52,10 @@
         android:name="ru.mirea.logunovao.mireaproject.NetworkInfoFragment"
         android:label="fragment_network_info" />
     <fragment
+        android:id="@+id/map"
+        android:name="ru.mirea.logunovao.mireaproject.MapFragment"
+        android:label="fragment_map" />
+    <fragment
         android:id="@+id/dataFragment"
         android:name="ru.mirea.logunovao.mireaproject.DataFragment"
         android:label="fragment_data"
