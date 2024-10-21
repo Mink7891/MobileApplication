@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -72,9 +73,11 @@ public class FileFragment extends Fragment {
             }
             Log.w("RawFile", String.format("Read from file successful: %s", lines.toString()));
             createDocx(lines);
+            showToast("Файл успешно загружен и сконвертирован в формат Word");
 
         } catch (Exception e) {
             Log.w("RawFile", String.format("Read from file failed: %s", e.getMessage()));
+            showToast("Ошибка загрузки файла");
         }
     }
 
@@ -91,8 +94,14 @@ public class FileFragment extends Fragment {
 
             output.close();
 
+
         } catch (IOException e) {
+
             Log.w("ExternalStorage", "Error	writing	" + file, e);
         }
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show();
     }
 }

@@ -1,11 +1,13 @@
 package ru.mirea.logunovao.mireaproject;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,12 +24,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class NetworkInfoFragment extends Fragment {
 
     private TextView infoTextView;
+    private Context context;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_network_info, container, false);
         infoTextView = rootView.findViewById(R.id.infoTextView);
+        context = getContext();
         fetchData();
         return rootView;
     }
@@ -49,20 +53,21 @@ public class NetworkInfoFragment extends Fragment {
                         Cat cat = cats.get(0);
                         infoTextView.setText(cat.url);
                     } else {
-                        // Выводим сообщение о том, что данных нет
-                        System.out.println("Нет данных о котах");
+                        showToast("Нет данных о котах");
                     }
                 } else {
-                    // Выводим сообщение об ошибке
-                    System.out.println("Ошибка при получении данных: " + response.message());
+                    showToast("Ошибка при получении данных: " + response.message());
                 }
             }
 
             @Override
             public void onFailure(Call<List<Cat>> call, Throwable t) {
-                // Выводим сообщение об ошибке
-                System.out.println("Ошибка при выполнении запроса: " + t.getMessage());
+                showToast("Ошибка при выполнении запроса: " + t.getMessage());
             }
         });
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 }
